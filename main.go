@@ -1,6 +1,7 @@
 package main
 
 import (
+	money "github.com/ahhzaky/Golang-Gorm-And-Fiber/Money"
 	"github.com/ahhzaky/Golang-Gorm-And-Fiber/book"
 	"github.com/gofiber/fiber"
 )
@@ -14,6 +15,7 @@ func setupRoutes(app *fiber.App) {
 	app.Get("/api/v1/book/:id", book.GetBook)
 	app.Post("/api/v1/book", book.NewBook)
 	app.Delete("/api/v1/book/:id", book.DeleteBooks)
+	app.Get("/api/v1/money", money.GetMoney)
 
 }
 
